@@ -1,0 +1,6 @@
+# External plugins chezmoi fetches on `chezmoi apply` (no plugin manager).
+
+[".config/zsh/fzf-tab"]
+    type = "git-repo"
+    url = "https://github.com/Aloxaf/fzf-tab.git"
+    refreshPeriod = "168h"

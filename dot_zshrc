@@ -1,0 +1,40 @@
+# ~/.zshrc — interactive shell (managed by chezmoi: `chezmoi edit ~/.zshrc`)
+
+# Homebrew prefix (exported by .zprofile on login shells; fallback otherwise)
+export HOMEBREW_PREFIX="${HOMEBREW_PREFIX:-/opt/homebrew}"
+
+# user-local binaries first on PATH
+export PATH="$HOME/.local/bin:$PATH"
+
+ZSH_CONFIG="$HOME/.config/zsh"
+
+# --- shell behaviour, history, completion options ---
+source "$ZSH_CONFIG/options.zsh"
+
+# --- completion system ---
+# brew completions onto fpath BEFORE compinit
+fpath=("$HOMEBREW_PREFIX/share/zsh-completions" "$HOMEBREW_PREFIX/share/zsh/site-functions" $fpath)
+autoload -Uz compinit
+# rebuild the compdump at most once a day, otherwise load it fast (-C)
+if [[ "$(date +%j)" != "$(stat -f '%Sm' -t '%j' "${ZDOTDIR:-$HOME}/.zcompdump" 2>/dev/null)" ]]; then
+  compinit
+else
+  compinit -C
+fi
+zmodload zsh/complist
+
+# --- aliases & functions ---
+source "$ZSH_CONFIG/aliases.zsh"
+source "$ZSH_CONFIG/functions.zsh"
+
+# --- plugins, prompt, tools (ORDER-SENSITIVE — see file) ---
+source "$ZSH_CONFIG/plugins.zsh"
+
+# --- kept from previous setup ---
+# nvm (eager load; left as-is so node tooling keeps working out of the box)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# bun
+export PATH="$HOME/.bun/bin:$PATH"

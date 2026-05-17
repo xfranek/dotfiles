@@ -1,0 +1,3 @@
+# Source-only files — never materialised into $HOME
+README.md
+Brewfile

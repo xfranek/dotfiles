@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Runs on `chezmoi apply` whenever the Brewfile changes (the hash below is part
+# of the script body, so chezmoi re-runs it on any Brewfile edit).
+#
+# Brewfile hash: {{ include "Brewfile" | sha256sum }}
+
+if ! command -v brew >/dev/null 2>&1; then
+  echo "Homebrew not found — install it first: https://brew.sh" >&2
+  exit 1
+fi
+
+echo "==> brew bundle (chezmoi)"
+brew bundle --no-upgrade --file={{ joinPath .chezmoi.sourceDir "Brewfile" | quote }}

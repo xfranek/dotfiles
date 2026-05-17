@@ -1,0 +1,3 @@
+# ~/.zprofile — login shell (managed by chezmoi)
+
+eval "$(/opt/homebrew/bin/brew shellenv zsh)"
