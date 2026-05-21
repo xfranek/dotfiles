@@ -1,0 +1,39 @@
+# Nord Deep — Nord canonical palette on a deeper background (#232731),
+# with warm aurora-yellow cursor and a subtle polar-night selection.
+# Inspired by Ghostty's built-in Nord, Nord Wave and Nordfox.
+
+# --- Polar Night → Snow Storm (canonical Nord 16) ---
+palette = 0=#3b4252
+palette = 1=#bf616a
+palette = 2=#a3be8c
+palette = 3=#ebcb8b
+palette = 4=#81a1c1
+palette = 5=#b48ead
+palette = 6=#88c0d0
+palette = 7=#e5e9f0
+palette = 8=#4c566a
+palette = 9=#bf616a
+palette = 10=#a3be8c
+palette = 11=#ebcb8b
+palette = 12=#81a1c1
+palette = 13=#b48ead
+palette = 14=#8fbcbb
+palette = 15=#eceff4
+
+background = #232731
+foreground = #d8dee9
+
+# Aurora-yellow cursor (Nord Wave move): warm accent on cool deep bg,
+# highly visible without competing with the desaturated text colors.
+# cursor-text = bg makes the cursor read as a solid colored block.
+cursor-color = #ebcb8b
+cursor-text = #232731
+
+# Selection: Nord polar-night N2 (#434c5e) — sits between palette black (#3b4252)
+# and brightBlack (#4c566a). Subtle against bg, distinct from regular text.
+# brightWhite foreground makes selected text pop without inverting the whole row.
+selection-background = #434c5e
+selection-foreground = #eceff4
+
+# Splits: muted nord black for the inactive divider.
+split-divider-color = #3b4252

@@ -1,0 +1,4 @@
+# Ghostty config — managed by chezmoi (`chezmoi edit ~/.config/ghostty/config`).
+# User themes live in ~/.config/ghostty/themes/ and Ghostty picks them up by name.
+
+theme = nord-deep
