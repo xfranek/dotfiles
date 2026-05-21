@@ -22,9 +22,9 @@ brew "imagemagick"
 brew "resvg"
 
 # --- zsh plugins (sourced from $HOMEBREW_PREFIX/share) ---
-brew "zsh-autosuggestions"
+tap "utsavmandal2022/zsh-sage"
+brew "zsh-sage"        # intelligent autosuggestions (replaces zsh-autosuggestions + history-substring-search)
 brew "zsh-syntax-highlighting"
-brew "zsh-history-substring-search"
 brew "zsh-completions"
 
 # --- fonts ---

@@ -1,7 +1,7 @@
 # plugins.zsh — ORDER MATTERS. Do not reshuffle blocks without checking the
 # upstream READMEs. Sequence:
 #   fzf  ->  fzf-tab  ->  zoxide  ->  starship
-#   ->  autosuggestions  ->  syntax-highlighting  ->  history-substring-search
+#   ->  zsh-sage (autosuggestions)  ->  syntax-highlighting
 
 # --- fzf: Ctrl-R history, Ctrl-T files, Alt-C cd ---
 if command -v fzf >/dev/null 2>&1; then
@@ -36,24 +36,11 @@ eval "$(zoxide init zsh --cmd cd)"
 # --- starship prompt ---
 eval "$(starship init zsh)"
 
-# --- zsh-autosuggestions: gray inline suggestion from history ---
-source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
-ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
-# → / End already accept the whole suggestion; add Ctrl-Space too
-bindkey '^ ' autosuggest-accept
+# --- zsh-sage: intelligent autosuggestions with multi-signal ranking
+#     (frequency / recency / directory / sequence / success). Replaces
+#     zsh-autosuggestions and history-substring-search. → accepts, Ctrl+N
+#     cycles alternatives. `hm <prompt>` for AI commands (`zsage ai` to setup). ---
+source "$HOMEBREW_PREFIX/opt/zsh-sage/zsh-sage.plugin.zsh"
 
-# --- zsh-syntax-highlighting: must come AFTER autosuggestions and BEFORE
-#     history-substring-search ---
+# --- zsh-syntax-highlighting: must come AFTER autosuggestions ---
 source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-
-# --- zsh-history-substring-search: type a prefix, then ↑/↓ to walk ONLY the
-#     history lines that start with what you typed ---
-source "$HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring-search.zsh"
-bindkey '^[[A' history-substring-search-up      # ↑
-bindkey '^[[B' history-substring-search-down    # ↓
-bindkey '^[OA' history-substring-search-up      # ↑ (application cursor mode)
-bindkey '^[OB' history-substring-search-down    # ↓ (application cursor mode)
-bindkey '^P'   history-substring-search-up
-bindkey '^N'   history-substring-search-down
-HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='bg=6,fg=0,bold'
