@@ -8,6 +8,8 @@ brew "bat"
 brew "chezmoi"
 # Cross-platform make
 brew "cmake"
+# Free rewrite of a game originally based on "Drug Wars"
+brew "dopewars"
 # Modern, maintained replacement for ls
 brew "eza"
 # Simple, fast and user-friendly alternative to find
@@ -52,6 +54,8 @@ brew "ripgrep"
 brew "sevenzip"
 # Cross-shell prompt for astronauts
 brew "starship"
+# Change macOS audio source from the command-line
+brew "switchaudio-osx"
 # OCR (Optical Character Recognition) engine
 brew "tesseract"
 # Enables extra languages support for Tesseract
@@ -105,6 +109,8 @@ cask "microsoft-excel"
 cask "mitmproxy"
 # VPN client
 cask "mullvad-vpn"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Collection of apps available by subscription
