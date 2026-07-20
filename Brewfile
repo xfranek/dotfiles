@@ -8,6 +8,8 @@ brew "bat"
 brew "chezmoi"
 # Cross-platform make
 brew "cmake"
+# Create and run Linux containers using lightweight virtual machines
+brew "container"
 # Free rewrite of a game originally based on "Drug Wars"
 brew "dopewars"
 # Modern, maintained replacement for ls
@@ -22,6 +24,8 @@ brew "fzf"
 brew "gh"
 # Syntax-highlighting pager for git and diff output
 brew "git-delta"
+# Command-line interface for Hetzner Cloud
+brew "hcloud"
 # Tools and libraries to manipulate images in select formats
 brew "imagemagick"
 # Lightweight and flexible command-line JSON processor
@@ -34,6 +38,8 @@ brew "libpq", link: true
 brew "llama.cpp"
 # Small build system for use with gyp or CMake
 brew "ninja"
+# Development kit for the Java programming language
+brew "openjdk@17"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # Package compiler and linker metadata toolkit
@@ -52,6 +58,8 @@ brew "resvg"
 brew "ripgrep"
 # 7-Zip is a file archiver with a high compression ratio
 brew "sevenzip"
+# SOcket CAT: netcat on steroids
+brew "socat"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Change macOS audio source from the command-line
@@ -86,6 +94,10 @@ brew "zsh-syntax-highlighting"
 brew "shopify/shopify/shopify-cli"
 # Enable Windows-like alt-tab
 cask "alt-tab"
+# Command-line tools for building and debugging Android apps
+cask "android-commandlinetools"
+# Android SDK component
+cask "android-platform-tools"
 # Display management tool
 cask "betterdisplay"
 # Anthropic's official Claude AI desktop app
