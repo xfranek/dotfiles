@@ -1,3 +1,4 @@
+tap "mongodb/brew"
 tap "oven-sh/bun"
 tap "shopify/shopify", trusted: true
 tap "steipete/tap"
@@ -90,6 +91,8 @@ brew "zsh-completions"
 brew "zsh-history-substring-search"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# This package contains standard utilities for interacting with MongoDB.
+brew "mongodb/brew/mongodb-database-tools", trusted: true
 # A CLI tool to build for the Shopify platform
 brew "shopify/shopify/shopify-cli"
 # Enable Windows-like alt-tab
@@ -111,6 +114,8 @@ cask "discord"
 cask "font-jetbrains-mono-nerd-font"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Desktop automation application
+cask "hammerspoon"
 # Chromium-based web browser
 cask "helium-browser"
 # App to manage software development and track bugs
@@ -135,3 +140,5 @@ cask "telegram"
 cask "tor-browser"
 # Open-source BitTorrent client
 cask "transmission"
+# Virtual machines UI using QEMU
+cask "utm"
