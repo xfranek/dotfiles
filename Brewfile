@@ -3,6 +3,8 @@ tap "oven-sh/bun"
 tap "shopify/shopify", trusted: true
 tap "steipete/tap"
 tap "utsavmandal2022/zsh-sage", "https://github.com/UtsavMandal2022/homebrew-zsh-sage"
+# Library for command-line editing
+brew "readline"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Manage your dotfiles across multiple diverse machines, securely
@@ -11,6 +13,8 @@ brew "chezmoi"
 brew "cmake"
 # Create and run Linux containers using lightweight virtual machines
 brew "container"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
 # Free rewrite of a game originally based on "Drug Wars"
 brew "dopewars"
 # Modern, maintained replacement for ls
@@ -19,6 +23,8 @@ brew "eza"
 brew "fd"
 # Create thumbnails for your video files
 brew "ffmpegthumbnailer"
+# X11 implementation of the Remote Desktop Protocol (RDP)
+brew "freerdp"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GitHub command-line tool
@@ -47,8 +53,14 @@ brew "pandoc"
 brew "pkgconf"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
+# Python interface to Tcl/Tk
+brew "python-tk@3.14"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.13"
 # Cross-platform application and UI framework
 brew "qt"
+# Work with series of patches
+brew "quilt"
 # Rsync for cloud storage
 brew "rclone"
 # Fast, efficient and secure backup program
@@ -57,6 +69,8 @@ brew "restic"
 brew "resvg"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# SMB/CIFS file, print, and login server for UNIX
+brew "samba"
 # 7-Zip is a file archiver with a high compression ratio
 brew "sevenzip"
 # SOcket CAT: netcat on steroids
@@ -71,6 +85,8 @@ brew "tesseract"
 brew "tesseract-lang"
 # Markup-based typesetting system
 brew "typst"
+# Internet file retriever
+brew "wget"
 # Port of OpenAI's Whisper model in C/C++
 brew "whisper-cpp"
 # Tools for the WireGuard secure network tunnel
