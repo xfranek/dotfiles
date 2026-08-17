@@ -2,6 +2,7 @@ tap "mongodb/brew"
 tap "oven-sh/bun"
 tap "shopify/shopify", trusted: true
 tap "steipete/tap"
+tap "teamookla/speedtest", trusted: true
 tap "utsavmandal2022/zsh-sage", "https://github.com/UtsavMandal2022/homebrew-zsh-sage"
 # Library for command-line editing
 brew "readline"
@@ -35,6 +36,10 @@ brew "git-delta"
 brew "hcloud"
 # Tools and libraries to manipulate images in select formats
 brew "imagemagick"
+# Update of iperf: measures TCP, UDP, and SCTP bandwidth
+brew "iperf3"
+# Dex to Java decompiler
+brew "jadx"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Simple terminal UI for git commands
@@ -73,6 +78,8 @@ brew "ripgrep"
 brew "samba"
 # 7-Zip is a file archiver with a high compression ratio
 brew "sevenzip"
+# Monitors sleep, wakeup, and idleness of a Mac
+brew "sleepwatcher", restart_service: :changed
 # SOcket CAT: netcat on steroids
 brew "socat"
 # Cross-shell prompt for astronauts
@@ -111,6 +118,8 @@ brew "zsh-syntax-highlighting"
 brew "mongodb/brew/mongodb-database-tools", trusted: true
 # A CLI tool to build for the Shopify platform
 brew "shopify/shopify/shopify-cli"
+# Ookla Speedtest
+brew "teamookla/speedtest/speedtest"
 # Enable Windows-like alt-tab
 cask "alt-tab"
 # Command-line tools for building and debugging Android apps
