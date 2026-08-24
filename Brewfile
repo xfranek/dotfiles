@@ -1,7 +1,7 @@
 tap "mongodb/brew"
 tap "oven-sh/bun"
 tap "shopify/shopify", trusted: true
-tap "steipete/tap"
+tap "steipete/tap", trusted: { casks: ["codexbar"] }
 tap "teamookla/speedtest", trusted: true
 tap "utsavmandal2022/zsh-sage", "https://github.com/UtsavMandal2022/homebrew-zsh-sage"
 # Library for command-line editing
@@ -32,6 +32,8 @@ brew "fzf"
 brew "gh"
 # Syntax-highlighting pager for git and diff output
 brew "git-delta"
+# World's fastest and most advanced password recovery utility
+brew "hashcat"
 # Command-line interface for Hetzner Cloud
 brew "hcloud"
 # Tools and libraries to manipulate images in select formats
@@ -40,6 +42,8 @@ brew "imagemagick"
 brew "iperf3"
 # Dex to Java decompiler
 brew "jadx"
+# Enhanced version of john, a UNIX password cracker
+brew "john-jumbo"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Simple terminal UI for git commands
@@ -50,6 +54,8 @@ brew "libpq", link: true
 brew "llama.cpp"
 # Small build system for use with gyp or CMake
 brew "ninja"
+# On-chip debugging, in-system programming and boundary-scan testing
+brew "open-ocd"
 # Development kit for the Java programming language
 brew "openjdk@17"
 # Swiss-army knife of markup format conversion
@@ -58,6 +64,8 @@ brew "pandoc"
 brew "pkgconf"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
+# Collection of on chip debugging tools to communicate with microchips
+brew "probe-rs-tools"
 # Python interface to Tcl/Tk
 brew "python-tk@3.14"
 # Interpreted, interactive, object-oriented programming language
@@ -82,8 +90,12 @@ brew "sevenzip"
 brew "sleepwatcher", restart_service: :changed
 # SOcket CAT: netcat on steroids
 brew "socat"
+# SQLite extension providing 256-bit AES encryption
+brew "sqlcipher"
 # Cross-shell prompt for astronauts
 brew "starship"
+# STM32 discovery line Linux programmer
+brew "stlink"
 # Change macOS audio source from the command-line
 brew "switchaudio-osx"
 # OCR (Optical Character Recognition) engine
@@ -92,6 +104,8 @@ brew "tesseract"
 brew "tesseract-lang"
 # Markup-based typesetting system
 brew "typst"
+# Web Assembly Binary Toolkit
+brew "wabt"
 # Internet file retriever
 brew "wget"
 # Port of OpenAI's Whisper model in C/C++
@@ -126,14 +140,18 @@ cask "alt-tab"
 cask "android-commandlinetools"
 # Android SDK component
 cask "android-platform-tools"
+# Allows connection to a computer remotely
+cask "anydesk"
 # Display management tool
 cask "betterdisplay"
+# 3D creation suite
+cask "blender"
 # Anthropic's official Claude AI desktop app
 cask "claude"
 # OpenAI's coding agent that runs in your terminal
 cask "codex"
 # Menu bar usage monitor for Codex and Claude
-cask "steipete/tap/codexbar", trusted: true
+cask "codexbar"
 # Voice and text chat software
 cask "discord"
 cask "font-jetbrains-mono-nerd-font"
@@ -161,6 +179,8 @@ cask "setapp"
 cask "spotify"
 # Messaging app with a focus on speed and security
 cask "telegram"
+# JDK from the Eclipse Foundation (Adoptium)
+cask "temurin@21"
 # Web browser focusing on security
 cask "tor-browser"
 # Open-source BitTorrent client
