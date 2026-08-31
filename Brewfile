@@ -84,6 +84,8 @@ brew "resvg"
 brew "ripgrep"
 # SMB/CIFS file, print, and login server for UNIX
 brew "samba"
+# Backends for scanner access
+brew "sane-backends"
 # 7-Zip is a file archiver with a high compression ratio
 brew "sevenzip"
 # Monitors sleep, wakeup, and idleness of a Mac
